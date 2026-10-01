@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bold Restaurant Ghana</title>
+<meta name="description" content="Bold Restaurant Ghana, Accra. Rooftop seating, cocktails, brunch, lunch and dinner.">
+<style>
+  :root {
+    --bg: #0e0e0c;
+    --surface: #181816;
+    --text: #f3efe6;
+    --muted: #a9a496;
+    --accent: #d9a441;
+    --line: #2a2a26;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(14,14,12,.92);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+  nav .logo { font-size: 1.25rem; letter-spacing: .3em; text-transform: uppercase; text-decoration: none; }
+  nav ul { display: flex; gap: 20px; list-style: none; font-family: system-ui, sans-serif; font-size: .85rem; }
+  nav ul a { text-decoration: none; color: var(--muted); }
+  nav ul a:hover { color: var(--accent); }
+  @media (max-width: 560px) { nav ul { display: none; } }
+  header.hero { padding: 96px 0 80px; text-align: center; border-bottom: 1px solid var(--line); }
+  .hero h1 { font-size: clamp(3rem, 12vw, 6rem); letter-spacing: .15em; text-transform: uppercase; font-weight: 400; }
+  .hero p { color: var(--muted); margin: 12px auto 28px; max-width: 480px; }
+  .rating { font-family: system-ui, sans-serif; font-size: .9rem; color: var(--accent); margin-bottom: 28px; }
+  .btn {
+    display: inline-block; padding: 12px 28px; border: 1px solid var(--accent);
+    color: var(--accent); text-decoration: none; font-family: system-ui, sans-serif;
+    font-size: .85rem; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .btn:hover { background: var(--accent); color: var(--bg); }
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-weight: 400; font-size: 1.8rem; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .card { background: var(--surface); padding: 20px; border: 1px solid var(--line); }
+  .card h3 { font-weight: 400; font-size: 1.1rem; color: var(--accent); margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; font-family: system-ui, sans-serif; font-size: .85rem; }
+  .tags span { border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; color: var(--muted); }
+  footer { padding: 40px 0; text-align: center; color: var(--muted); font-family: system-ui, sans-serif; font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Bold</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#info">Good to know</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1>Bold</h1>
+    <p>Restaurant &amp; rooftop bar in Accra. Brunch, lunch, dinner and late-night plates.</p>
+    <div class="rating">★ 4.3 · 206 Google reviews</div>
+    <a class="btn" href="#visit">Reserve a table</a>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>The experience</h2>
+    <p class="sub">Cosy, romantic and trendy, with an ambience guests mention often in their reviews.</p>
+    <div class="grid">
+      <div class="card"><h3>Rooftop &amp; outdoor seating</h3><p>Dine in, sit outside or take your food away.</p></div>
+      <div class="card"><h3>Cocktails, wine &amp; beer</h3><p>Great cocktails, a great wine list, a great beer selection and spirits at the bar.</p></div>
+      <div class="card"><h3>Coffee &amp; tea</h3><p>Great coffee and tea selection, plus dessert to finish.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>From the kitchen</h2>
+    <p class="sub">Guest favourites. Ask the team for the current full menu.</p>
+    <div class="grid">
+      <div class="card"><h3>Wagyu burger</h3><p>A favourite in guest reviews.</p></div>
+      <div class="card"><h3>Salmon ceviche</h3><p>Another review favourite.</p></div>
+      <div class="card"><h3>Small plates</h3><p>Quick bites and plates to share.</p></div>
+    </div>
+    <p class="sub" style="margin-top:24px">Halal food · Vegetarian and vegan options · Kids' menu · Catering available</p>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <h2>Good to know</h2>
+    <p class="sub">Brunch reservations are recommended.</p>
+    <div class="tags">
+      <span>Accepts reservations</span><span>Brunch</span><span>Lunch</span><span>Dinner</span>
+      <span>Late-night food</span><span>Table service</span><span>Good for groups</span>
+      <span>Good for kids</span><span>High chairs</span><span>Kids' birthdays</span>
+      <span>Wheelchair-accessible</span><span>Free parking</span>
+      <span>Credit &amp; debit cards</span><span>NFC mobile payments</span>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2>Visit us</h2>
+    <p class="sub">Accra, Ghana. Message us on Instagram to reserve or ask about catering.</p>
+    <a class="btn" href="https://www.instagram.com/boldghana/" target="_blank" rel="noopener">@boldghana on Instagram</a>
+    <!-- TODO: add street address, phone number and opening hours once confirmed by the restaurant. -->
+  </div>
+</section>
+
+<footer>© Bold Restaurant Ghana</footer>
+
+</body>
+</html>
