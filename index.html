@@ -48,6 +48,7 @@
   "address": { "@type": "PostalAddress", "streetAddress": "12 Obenesu Cres", "addressLocality": "Accra", "addressCountry": "GH" },
   "hasMenu": "https://bold-restaurant-ghana.vercel.app/menu.html",
   "acceptsReservations": true,
+  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "00:00" }],
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "206" },
   "sameAs": ["https://www.instagram.com/boldghana/"]
 }
@@ -95,6 +96,7 @@
       <picture><source media="(min-width:960px)" srcset="images/patio.jpg"><img src="images/sushi.jpg" alt="" loading="lazy"></picture>
     </div>
   </div>
+  <div class="pager" id="pager" aria-label="Hero photos"><button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
   <div class="wrap hero-content">
     <span class="kicker">Accra, Ghana</span>
     <h1>Eat bold.<br>Feel at home.</h1>
@@ -106,10 +108,6 @@
       </a>
       <a class="btn glass" href="#gallery">Take a look inside</a>
     </div>
-    <div class="hero-foot">
-
-      <div class="pager" id="pager" aria-label="Hero photos"><button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
-    </div>
   </div>
 </section>
 
@@ -119,7 +117,7 @@
     <div class="intro reveal">
       <div>
         <span class="eyebrow">Guest favourites</span>
-        <h2>We have delicious food, tasty food in town</h2>
+        <h2>Taste what everyone is talking about</h2>
       </div>
       <p class="muted">From sushi and seared fish to cocktails poured at our bar, there's something good at every hour. Tap the arrow on any dish to ask about it on WhatsApp.</p>
     </div>
@@ -227,7 +225,10 @@
       <div class="visit-copy">
         <span class="eyebrow">Find us</span>
         <h2>Come say hello</h2>
+        <span class="label">Address</span>
         <p>12 Obenesu Cres,<br>Accra, Ghana</p>
+        <span class="label">Opening hours</span>
+        <p>Open daily<br>12 pm – 12 am</p>
         <p class="note">Planning a birthday or need catering? <a href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">Send us a message</a>.</p>
       </div>
       <div class="map">
@@ -244,7 +245,7 @@
   <div class="wrap">
     <a class="logo" href="#top">Bold</a>
     <p class="line">12 Obenesu Cres, Accra · <a href="tel:+233540777007">+233 54 077 7007</a> · <a href="https://www.instagram.com/boldghana/" target="_blank" rel="noopener">@boldghana</a></p>
-    <!-- TODO: add opening hours and confirm house number (Google says 12, WhatsApp says 11 Obenesu Cres). -->
+    <!-- TODO: confirm opening hours (12 pm - 12 am daily, from public listings) and house number (Google says 12, WhatsApp says 11 Obenesu Cres). -->
     <span class="copy">© Bold Restaurant Ghana · Designed by <a href="https://baiden-creatives.vercel.app" target="_blank" rel="noopener">Baiden Creatives</a></span>
   </div>
 </footer>
