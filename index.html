@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GH">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,6 +11,14 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="canonical" href="https://bold-restaurant-ghana.vercel.app/">
+<link rel="alternate" hreflang="en-GH" href="https://bold-restaurant-ghana.vercel.app/">
+<link rel="alternate" hreflang="x-default" href="https://bold-restaurant-ghana.vercel.app/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="geo.region" content="GH-AA">
+<meta name="geo.placename" content="Accra">
+<meta name="author" content="Baiden Creatives">
+<link rel="preload" as="image" href="images/pendant-lounge.jpg" media="(max-width: 959px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/bar-sign.jpg" media="(min-width: 960px)" fetchpriority="high">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/icons/favicon-16.png" sizes="16x16" type="image/png">
@@ -38,24 +46,257 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Bold Restaurant Ghana",
-  "description": "Rooftop dining, great cocktails and plates worth the trip in Accra, Ghana.",
-  "url": "https://bold-restaurant-ghana.vercel.app/",
-  "image": "https://bold-restaurant-ghana.vercel.app/og-image.jpg",
-  "logo": "https://bold-restaurant-ghana.vercel.app/icons/icon-512.png",
-  "telephone": "+233540777007",
-  "address": { "@type": "PostalAddress", "streetAddress": "12 Obenesu Cres", "addressLocality": "Accra", "addressCountry": "GH" },
-  "hasMenu": "https://bold-restaurant-ghana.vercel.app/menu.html",
-  "acceptsReservations": true,
-  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "00:00" }],
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "206" },
-  "sameAs": ["https://www.instagram.com/boldghana/"]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://bold-restaurant-ghana.vercel.app/#website",
+      "url": "https://bold-restaurant-ghana.vercel.app/",
+      "name": "Bold Restaurant Ghana",
+      "inLanguage": "en-GH",
+      "publisher": {
+        "@id": "https://bold-restaurant-ghana.vercel.app/#restaurant"
+      }
+    },
+    {
+      "@type": "Restaurant",
+      "@id": "https://bold-restaurant-ghana.vercel.app/#restaurant",
+      "name": "Bold Restaurant Ghana",
+      "alternateName": "Bold",
+      "description": "Rooftop restaurant and bar in Accra, Ghana, serving brunch, lunch, dinner, sushi, cocktails and late-night plates.",
+      "url": "https://bold-restaurant-ghana.vercel.app/",
+      "image": [
+        "https://bold-restaurant-ghana.vercel.app/og-image.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/bar-sign.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/pendant-lounge.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/dining-room.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/patio.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/entrance.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/sushi.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/seared-fish.jpg",
+        "https://bold-restaurant-ghana.vercel.app/images/cocktail.jpg"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bold-restaurant-ghana.vercel.app/icons/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "telephone": "+233540777007",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Obenesu Cres",
+        "addressLocality": "Accra",
+        "addressRegion": "Greater Accra",
+        "addressCountry": "GH"
+      },
+      "areaServed": "Accra, Ghana",
+      "hasMenu": "https://bold-restaurant-ghana.vercel.app/menu.html",
+      "acceptsReservations": true,
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "12:00",
+          "closes": "00:00"
+        }
+      ],
+      "paymentAccepted": "Credit card, debit card, NFC mobile payments",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Rooftop seating",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Outdoor seating",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free parking lot",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free street parking",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wheelchair-accessible seating",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wheelchair-accessible toilet",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Bar on site",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "High chairs",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Kids' menu",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Halal food",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vegetarian options",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vegan options",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Takeaway",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Table service",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Late-night food",
+          "value": true
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+233540777007",
+        "contactType": "reservations",
+        "availableLanguage": "English"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/233540777007",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Reserve a table at Bold Restaurant Ghana"
+        }
+      },
+      "sameAs": [
+        "https://www.instagram.com/boldghana/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bold-restaurant-ghana.vercel.app/#faq",
+      "inLanguage": "en-GH",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Bold Restaurant Ghana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bold Restaurant Ghana is at 12 Obenesu Cres, Accra, Ghana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Bold's opening hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bold is open daily from 12 pm to 12 am."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to reserve a table at Bold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bold accepts reservations, and brunch reservations are recommended. Message the team on WhatsApp at +233 54 077 7007 to book a table, plan a birthday or ask about catering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Bold have rooftop or outdoor seating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bold has rooftop and outdoor seating as well as dine-in and takeaway. Delivery is not available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there parking at Bold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. There is a free parking lot and free street parking, with plenty of space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Bold good for kids and groups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bold is good for kids and kids' birthdays, with high chairs and a kids' menu, and it welcomes groups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Bold serve halal, vegetarian or vegan food?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bold serves halal food and has vegetarian and vegan options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which payment methods does Bold accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bold accepts credit cards, debit cards and NFC mobile payments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Bold wheelchair accessible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bold has wheelchair-accessible seating and a wheelchair-accessible toilet."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#favourites">Skip to content</a>
 
 <header class="top" id="header">
   <div class="wrap">
@@ -87,19 +328,19 @@
 <section class="hero">
   <div class="slides" aria-hidden="true">
     <div class="slide active">
-      <picture><source media="(min-width:960px)" srcset="images/bar-sign.jpg"><img src="images/pendant-lounge.jpg" alt="" fetchpriority="high" style="object-position:50% 60%"></picture>
+      <picture><source media="(min-width:960px)" srcset="images/bar-sign.jpg"><img src="images/pendant-lounge.jpg" alt="Covered dining area with pendant lights at Bold Restaurant Ghana, Accra" fetchpriority="high" style="object-position:50% 60%"></picture>
     </div>
     <div class="slide">
-      <picture><source media="(min-width:960px)" srcset="images/dining-room.jpg"><img src="images/cocktail.jpg" alt="" loading="lazy"></picture>
+      <picture><source media="(min-width:960px)" srcset="images/dining-room.jpg"><img src="images/cocktail.jpg" alt="Red cocktail in a cut-glass coupe at Bold Restaurant Ghana" loading="lazy"></picture>
     </div>
     <div class="slide">
-      <picture><source media="(min-width:960px)" srcset="images/patio.jpg"><img src="images/sushi.jpg" alt="" loading="lazy"></picture>
+      <picture><source media="(min-width:960px)" srcset="images/patio.jpg"><img src="images/sushi.jpg" alt="Sushi platter with tuna, salmon and avocado rolls at Bold Restaurant Ghana" loading="lazy"></picture>
     </div>
   </div>
   <div class="pager" id="pager" aria-label="Hero photos"><button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
   <div class="wrap hero-content">
     <span class="kicker">Accra, Ghana</span>
-    <h1>Eat bold.<br>Feel at home.</h1>
+    <h1><span class="sr-only">Bold Restaurant Ghana, rooftop restaurant and bar in Accra. </span>Eat bold.<br>Feel at home.</h1>
     <p class="lead">The restaurant your friends keep telling you about. Come dine, connect, and feel at home.</p>
     <div class="rating-pill"><span>★</span><b>4.3</b><span>· 206 Google reviews</span></div>
     <div class="hero-ctas">
@@ -206,13 +447,17 @@
     </div>
     <div class="reveal">
       <span class="eyebrow">Good to know</span>
-      <h2>Everything for a smooth evening</h2>
-      <div class="tags">
-        <span>Accepts reservations</span><span>Brunch, lunch &amp; dinner</span>
-        <span>Late-night food</span><span>Table service</span><span>Groups welcome</span>
-        <span>Good for kids</span><span>High chairs</span><span>Kids' birthdays</span>
-        <span>Wheelchair-accessible</span><span>Free parking</span>
-        <span>Credit &amp; debit cards</span><span>NFC mobile payments</span>
+      <h2>Questions, answered</h2>
+      <div class="faq">
+        <details><summary>Where is Bold Restaurant Ghana?</summary><p>Bold Restaurant Ghana is at 12 Obenesu Cres, Accra, Ghana.</p></details>
+        <details><summary>What are Bold's opening hours?</summary><p>Bold is open daily from 12 pm to 12 am.</p></details>
+        <details><summary>Do I need to reserve a table at Bold?</summary><p>Bold accepts reservations, and brunch reservations are recommended. Message the team on WhatsApp at +233 54 077 7007 to book a table, plan a birthday or ask about catering.</p></details>
+        <details><summary>Does Bold have rooftop or outdoor seating?</summary><p>Yes. Bold has rooftop and outdoor seating as well as dine-in and takeaway. Delivery is not available.</p></details>
+        <details><summary>Is there parking at Bold?</summary><p>Yes. There is a free parking lot and free street parking, with plenty of space.</p></details>
+        <details><summary>Is Bold good for kids and groups?</summary><p>Yes. Bold is good for kids and kids' birthdays, with high chairs and a kids' menu, and it welcomes groups.</p></details>
+        <details><summary>Does Bold serve halal, vegetarian or vegan food?</summary><p>Yes. Bold serves halal food and has vegetarian and vegan options.</p></details>
+        <details><summary>Which payment methods does Bold accept?</summary><p>Bold accepts credit cards, debit cards and NFC mobile payments.</p></details>
+        <details><summary>Is Bold wheelchair accessible?</summary><p>Yes. Bold has wheelchair-accessible seating and a wheelchair-accessible toilet.</p></details>
       </div>
     </div>
   </div>

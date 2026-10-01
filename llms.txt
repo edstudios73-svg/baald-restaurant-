@@ -1,0 +1,50 @@
+# Bold Restaurant Ghana
+
+> Bold is a rooftop restaurant and bar at 12 Obenesu Cres, Accra, Ghana. It serves brunch, lunch, dinner, sushi, cocktails and late-night food, with rooftop and outdoor seating. Rated 4.3 from 206 Google reviews.
+
+## Key facts
+- Address: 12 Obenesu Cres, Accra, Ghana
+- Opening hours: daily, 12 pm to 12 am
+- Phone and WhatsApp (reservations): +233 54 077 7007
+- Reservations: accepted; brunch reservations recommended
+- Seating: rooftop, outdoor and indoor; dine-in and takeaway (no delivery)
+- Parking: free parking lot and free street parking
+- Dietary: halal food, vegetarian and vegan options, kids' menu
+- Good for: groups, kids and kids' birthdays, solo dining, tourists
+- Accessibility: wheelchair-accessible seating and toilet
+- Payments: credit cards, debit cards, NFC mobile payments
+- Instagram: https://www.instagram.com/boldghana/
+
+## Pages
+- [Home](https://bold-restaurant-ghana.vercel.app/): overview, photos, FAQ, location and opening hours
+- [Menu](https://bold-restaurant-ghana.vercel.app/menu.html): selected dishes and drinks
+
+## Menu highlights
+
+### To Start
+- Korean Chicken Wings: Fresh chicken wings with our special Korean mix, sprinkled with spring onions, sesame and ginger.
+- Salmon Tartare: Fresh salmon stacked with pickled radish, beetroot and caviar, seasoned with avocado cream.
+- Goat Cheese Salad: Fried goat cheese balls, arugula, walnuts, croutons, mushroom slices and balsamic dressing.
+- Salmon Ceviche
+
+### From the Sushi Bar
+- Sushi Platter: An assortment of rolls with tuna, salmon, avocado and crisp toppings, served with ginger and wasabi.
+
+### Mains
+- Seared Fish: Crisp-skinned fish served over a green purée.
+- Wagyu Burger
+- Pizza
+
+### Bread & Sweet
+- Bread
+- Coconut Cotta
+
+### Drinks
+- Cocktails: Great cocktails, poured at our bar.
+- Wine: A great wine list.
+- Beer & Spirits: A great beer selection, with spirits at the bar.
+- Coffee & Tea: Great coffee and tea selection.
+
+## Notes
+- The menu on the site is a selection; prices and availability are given by the restaurant.
+- Website designed by Baiden Creatives: https://baiden-creatives.vercel.app

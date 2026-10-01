@@ -303,3 +303,17 @@ body.menu-page {
   .course-body.has-photo.flip .plate { order: 2; }
   .items.cols { grid-template-columns: 1fr 1fr; gap: 34px 72px; }
 }
+
+/* ===== Accessibility + FAQ ===== */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: fixed; left: 12px; top: -60px; z-index: 100; background: #fff; color: #0d0d0d; padding: 12px 18px; border-radius: 12px; font-weight: 700; font-size: .85rem; box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: top .2s; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid #d6a850; outline-offset: 3px; }
+.faq { display: grid; gap: 10px; margin-top: 26px; max-width: 800px; }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 0 22px; transition: box-shadow .25s; }
+.faq details[open] { box-shadow: 0 10px 30px rgba(20,20,10,.08); }
+.faq summary { cursor: pointer; list-style: none; padding: 18px 30px 18px 0; font-weight: 700; font-size: .98rem; line-height: 1.4; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.5rem; font-weight: 400; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq p { padding: 0 0 20px; color: var(--muted); font-size: .95rem; }

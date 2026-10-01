@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bold-restaurant-ghana.vercel.app/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/og-image.jpg</image:loc>
+      <image:caption>Bold Restaurant Ghana: the lit Bold sign over the bar on the rooftop in Accra</image:caption>
+      <image:title>Bold Restaurant Ghana: the lit Bold sign over the bar on the rooftop in Accra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/bar-sign.jpg</image:loc>
+      <image:caption>The Bold bar with a lit sign and shelves of bottles at Bold Restaurant Ghana, Accra</image:caption>
+      <image:title>The Bold bar with a lit sign and shelves of bottles</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/pendant-lounge.jpg</image:loc>
+      <image:caption>Covered dining area with pendant lights at Bold Restaurant Ghana</image:caption>
+      <image:title>Covered dining area with pendant lights</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/dining-room.jpg</image:loc>
+      <image:caption>Main dining room with hanging lights and a wood slat wall at Bold Restaurant Ghana</image:caption>
+      <image:title>Main dining room with hanging lights and a wood slat wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/patio.jpg</image:loc>
+      <image:caption>Outdoor patio with tables and the bar at Bold Restaurant Ghana</image:caption>
+      <image:title>Outdoor patio with tables and the bar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/entrance.jpg</image:loc>
+      <image:caption>Bold Restaurant Ghana entrance gate and sign at night, Obenesu Cres, Accra</image:caption>
+      <image:title>Bold Restaurant Ghana entrance gate and sign</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/sushi.jpg</image:loc>
+      <image:caption>Sushi platter with tuna, salmon and avocado rolls at Bold Restaurant Ghana</image:caption>
+      <image:title>Sushi platter with tuna, salmon and avocado rolls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/seared-fish.jpg</image:loc>
+      <image:caption>Seared fish with crisp skin on a green purée at Bold Restaurant Ghana</image:caption>
+      <image:title>Seared fish with crisp skin on a green purée</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/cocktail.jpg</image:loc>
+      <image:caption>Red cocktail in a cut-glass coupe with a lemon slice at Bold Restaurant Ghana</image:caption>
+      <image:title>Red cocktail in a cut-glass coupe with a lemon slice</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bold-restaurant-ghana.vercel.app/menu.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/bar-sign.jpg</image:loc>
+      <image:caption>The Bold bar with a lit sign and shelves of bottles at Bold Restaurant Ghana, Accra</image:caption>
+      <image:title>The Bold bar with a lit sign and shelves of bottles</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/sushi.jpg</image:loc>
+      <image:caption>Sushi platter with tuna, salmon and avocado rolls at Bold Restaurant Ghana</image:caption>
+      <image:title>Sushi platter with tuna, salmon and avocado rolls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/seared-fish.jpg</image:loc>
+      <image:caption>Seared fish with crisp skin on a green purée at Bold Restaurant Ghana</image:caption>
+      <image:title>Seared fish with crisp skin on a green purée</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bold-restaurant-ghana.vercel.app/images/cocktail.jpg</image:loc>
+      <image:caption>Red cocktail in a cut-glass coupe with a lemon slice at Bold Restaurant Ghana</image:caption>
+      <image:title>Red cocktail in a cut-glass coupe with a lemon slice</image:title>
+    </image:image>
+  </url>
+</urlset>
