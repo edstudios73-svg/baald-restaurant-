@@ -2,256 +2,368 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bold Restaurant Ghana | Rooftop Dining &amp; Cocktails in Accra</title>
-<meta name="description" content="Bold Restaurant Ghana, Obenesu Cres, Accra. Rooftop seating, cocktails, brunch, lunch, dinner and late-night plates.">
-<meta name="theme-color" content="#0b0a09">
+<meta name="description" content="Bold Restaurant Ghana, Obenesu Cres, Accra. Rooftop seating, cocktails, brunch, lunch, dinner and late-night plates. Reserve on WhatsApp.">
+<meta name="theme-color" content="#f6f5f2">
 <meta property="og:title" content="Bold Restaurant Ghana">
-<meta property="og:description" content="The restaurant your friends keep telling you about. Dine, connect, and feel at home.">
+<meta property="og:description" content="The restaurant your friends keep telling you about. Come dine, connect, and feel at home.">
 <meta property="og:type" content="restaurant">
+<meta property="og:image" content="images/seared-fish.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0b0a09;
-    --bg-2: #12100e;
-    --surface: #17140f;
-    --text: #f4efe4;
-    --muted: #9d968628;
-    --muted-text: #a39c8b;
-    --gold: #d4a64a;
-    --gold-soft: #e9cf94;
-    --line: rgba(212,166,74,.18);
-    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --bg: #f6f5f2;
+    --card: #ffffff;
+    --ink: #0d0d0d;
+    --muted: #6a6a64;
+    --line: #e6e4de;
+    --radius: 28px;
+    --shadow: 0 10px 40px rgba(20,20,10,.08);
+    --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    background: var(--bg); color: var(--ink); font-family: var(--font);
+    line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
   }
+  img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-  @media (min-width: 720px) { .wrap { padding: 0 32px; } }
+  .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 56px 0; }
 
-  .eyebrow {
-    font-size: .72rem; letter-spacing: .32em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 20px; display: block;
-  }
-  h2 {
-    font-family: var(--serif); font-weight: 300;
-    font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.08; margin-bottom: 20px;
-  }
-  h2 em { font-style: italic; color: var(--gold-soft); }
-  .lead { color: var(--muted-text); max-width: 520px; }
+  h1, h2, h3 { font-weight: 800; letter-spacing: -.02em; line-height: 1.12; }
+  h2 { font-size: clamp(1.7rem, 6vw, 2.6rem); margin-bottom: 14px; }
+  .muted { color: var(--muted); font-size: .95rem; }
+  .eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: block; }
 
   /* Buttons */
   .btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    padding: 15px 30px; font-size: .74rem; letter-spacing: .22em; text-transform: uppercase;
-    font-weight: 400; border: 1px solid var(--gold); color: var(--gold);
-    transition: background .3s, color .3s, transform .3s;
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+    background: var(--ink); color: #fff; font-weight: 600; font-size: .95rem;
+    padding: 16px 28px; border-radius: 16px; border: 0; cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0,0,0,.22); transition: transform .25s, box-shadow .25s;
+    min-height: 52px;
   }
-  .btn:hover { background: var(--gold); color: var(--bg); transform: translateY(-2px); }
-  .btn.solid { background: var(--gold); color: var(--bg); }
-  .btn.solid:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
-  .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.26); }
+  .btn svg { width: 18px; height: 18px; }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: none; border: 1.5px solid var(--ink); }
 
-  /* Nav */
-  nav {
-    position: fixed; inset: 0 0 auto 0; z-index: 50;
-    transition: background .4s, border-color .4s;
-    border-bottom: 1px solid transparent;
-  }
-  nav.scrolled { background: rgba(11,10,9,.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--line); }
-  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 72px; }
-  .logo { font-family: var(--serif); font-style: italic; font-size: 2rem; color: var(--gold-soft); letter-spacing: .02em; }
-  nav ul { display: flex; gap: 36px; list-style: none; }
-  nav ul a { font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--text); opacity: .75; transition: opacity .3s, color .3s; }
-  nav ul a:hover { opacity: 1; color: var(--gold); }
-  .nav-cta { padding: 10px 20px; }
-  @media (max-width: 800px) { nav ul { display: none; } }
+  /* Header */
+  header.top { position: sticky; top: 0; z-index: 40; background: rgba(246,245,242,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -.03em; line-height: 1; }
+  .logo small { display: block; font-size: .56rem; font-weight: 500; letter-spacing: .04em; color: var(--muted); margin-top: 3px; }
+  header.top nav { display: none; }
+  header.top .btn { padding: 11px 20px; min-height: 0; font-size: .82rem; border-radius: 12px; }
 
   /* Hero */
-  .hero {
-    min-height: 100svh; display: flex; align-items: center; justify-content: center;
-    text-align: center; position: relative; overflow: hidden; padding: 120px 0 80px;
-    background:
-      radial-gradient(60% 50% at 50% 38%, rgba(212,166,74,.16), transparent 70%),
-      radial-gradient(40% 40% at 85% 85%, rgba(212,166,74,.07), transparent 70%),
-      var(--bg);
+  .hero { padding: 28px 0 24px; overflow: hidden; }
+  .hero .wrap { display: grid; gap: 28px; }
+  .hero h1 { font-size: clamp(2.5rem, 11vw, 4.6rem); margin-bottom: 16px; }
+  .hero p.lead { color: var(--muted); max-width: 440px; margin-bottom: 24px; }
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+  .chip { background: var(--card); border-radius: 14px; padding: 10px 16px; font-size: .82rem; font-weight: 600; box-shadow: 0 6px 20px rgba(20,20,10,.07); }
+  .hero-art { position: relative; justify-self: center; width: min(86vw, 460px); aspect-ratio: 1; }
+  .hero-art .plate { width: 100%; height: 100% !important; object-fit: cover; border-radius: 50%; box-shadow: 0 30px 60px rgba(20,20,10,.28); border: 8px solid #fff; }
+  .hero-art .badge {
+    position: absolute; left: -2%; bottom: 8%; background: var(--card); border-radius: 18px;
+    padding: 12px 16px; box-shadow: var(--shadow); font-size: .8rem; line-height: 1.3;
   }
-  .hero::before {
-    content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
-    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 120px);
-    mask-image: radial-gradient(70% 70% at 50% 50%, #000, transparent);
-    -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, #000, transparent);
+  .hero-art .badge b { display: block; font-size: 1.15rem; font-weight: 800; }
+
+  /* Favourites carousel */
+  .intro { display: grid; gap: 10px; margin-bottom: 26px; }
+  .rail { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 20px 28px; margin: 0 -20px; scrollbar-width: none; }
+  .rail::-webkit-scrollbar { display: none; }
+  .rail > * { scroll-snap-align: start; flex: 0 0 auto; }
+  .dish-card { width: 72vw; max-width: 270px; background: var(--card); border-radius: var(--radius); padding: 12px 12px 18px; box-shadow: var(--shadow); position: relative; }
+  .dish-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 20px; margin-bottom: 14px; }
+  .dish-card h3 { font-size: 1.05rem; padding: 0 8px; }
+  .dish-card p { font-size: .82rem; color: var(--muted); padding: 2px 52px 0 8px; }
+  .dish-card .go {
+    position: absolute; right: 12px; bottom: 12px; width: 44px; height: 44px; border-radius: 14px 14px 20px 14px;
+    background: var(--ink); color: #fff; display: grid; place-items: center; transition: transform .25s;
   }
-  .hero .wrap { position: relative; }
-  .hero h1 {
-    font-family: var(--serif); font-style: italic; font-weight: 300;
-    font-size: clamp(6rem, 28vw, 17rem); line-height: .9; letter-spacing: -.02em;
-    background: linear-gradient(180deg, var(--gold-soft) 10%, var(--gold) 55%, #8d6a24 100%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    margin: 6px 0 8px; padding-right: .08em;
+  .dish-card .go:hover { transform: scale(1.08); }
+  .dish-card .go svg { width: 18px; height: 18px; }
+
+  /* Menu list */
+  .menu-grid { display: grid; gap: 14px; }
+  .menu-item { background: var(--card); border-radius: 22px; padding: 22px 22px 20px; box-shadow: 0 6px 24px rgba(20,20,10,.05); }
+  .menu-item h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .menu-item p { font-size: .88rem; color: var(--muted); }
+  .menu-note { margin-top: 22px; text-align: center; }
+
+  /* Split features */
+  .split { display: grid; gap: 28px; align-items: center; }
+  .split + .split { margin-top: 64px; }
+  .art { position: relative; }
+  .art img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4 / 3; object-fit: cover; }
+  .art.tall img { aspect-ratio: 4 / 5; }
+  .art .pill {
+    position: absolute; top: -14px; right: 14px; background: var(--ink); color: #fff; width: 84px; height: 84px; border-radius: 50%;
+    display: grid; place-items: center; text-align: center; font-weight: 800; font-size: 1.15rem; line-height: 1.1; box-shadow: 0 12px 28px rgba(0,0,0,.3);
   }
-  .hero .tag { font-size: .78rem; letter-spacing: .4em; text-transform: uppercase; color: var(--muted-text); }
-  .hero p.sub { font-family: var(--serif); font-size: clamp(1.2rem, 3.2vw, 1.7rem); font-weight: 300; max-width: 640px; margin: 28px auto 36px; color: var(--text); opacity: .9; }
-  .hero .btn-row { justify-content: center; }
-  .rating { margin-top: 44px; font-size: .78rem; letter-spacing: .2em; color: var(--muted-text); }
-  .rating b { color: var(--gold); font-weight: 400; }
-  .scroll-hint { position: absolute; bottom: 28px; left: 50%; width: 1px; height: 48px; background: linear-gradient(var(--gold), transparent); animation: drip 2.2s ease-in-out infinite; }
-  @keyframes drip { 0%,100% { opacity: .2; transform: translateY(-6px) } 50% { opacity: 1; transform: translateY(0) } }
+  .art .pill small { display: block; font-size: .6rem; font-weight: 500; opacity: .8; }
+  .ticks { list-style: none; margin-top: 18px; display: grid; gap: 10px; }
+  .ticks li { display: flex; gap: 10px; font-size: .92rem; font-weight: 500; }
+  .ticks li::before { content: ""; flex: 0 0 20px; height: 20px; margin-top: 2px; border-radius: 50%; background: var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat; }
 
-  /* Marquee */
-  .marquee { border-block: 1px solid var(--line); overflow: hidden; background: var(--bg-2); padding: 18px 0; }
-  .marquee-track { display: flex; gap: 48px; width: max-content; animation: slide 38s linear infinite; }
-  .marquee span { font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--gold-soft); white-space: nowrap; opacity: .85; }
-  .marquee span::after { content: "✦"; margin-left: 48px; font-style: normal; font-size: .8rem; color: var(--gold); }
-  @keyframes slide { to { transform: translateX(-50%); } }
+  /* Gallery */
+  .gallery-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+  .arrows { display: none; gap: 8px; }
+  .arrows button { width: 44px; height: 44px; border-radius: 14px; border: 1.5px solid var(--ink); background: transparent; cursor: pointer; display: grid; place-items: center; }
+  .arrows button:hover { background: var(--ink); color: #fff; }
+  .arrows svg { width: 18px; height: 18px; }
+  .shot { width: 78vw; max-width: 340px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #000; position: relative; }
+  .shot img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .shot span { position: absolute; left: 14px; bottom: 14px; background: rgba(255,255,255,.92); color: var(--ink); font-size: .74rem; font-weight: 600; padding: 7px 12px; border-radius: 10px; }
 
-  section { padding: clamp(72px, 12vw, 140px) 0; }
+  /* Stats + details */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 36px; }
+  .stat { background: var(--card); border-radius: 22px; padding: 22px 8px; text-align: center; box-shadow: 0 6px 24px rgba(20,20,10,.05); }
+  .stat b { display: block; font-size: 1.7rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+  .stat small { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .tags span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-size: .8rem; font-weight: 500; }
 
-  /* Experience */
-  .split { display: grid; gap: 56px; }
-  @media (min-width: 860px) { .split { grid-template-columns: 1fr 1.1fr; align-items: start; gap: 96px; } }
-  .features { display: grid; gap: 0; }
-  .feature { display: grid; grid-template-columns: 56px 1fr; gap: 8px; padding: 28px 0; border-top: 1px solid var(--line); }
-  .feature:last-child { border-bottom: 1px solid var(--line); }
-  .feature .n { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 1.3rem; }
-  .feature h3 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; line-height: 1.2; margin-bottom: 6px; }
-  .feature p { color: var(--muted-text); font-size: .95rem; }
+  /* Reserve CTA */
+  .reserve { padding-top: 24px; }
+  .reserve .box { background: var(--ink); color: #fff; border-radius: 32px; padding: 36px 26px; display: grid; gap: 22px; }
+  .reserve .eyebrow { color: rgba(255,255,255,.6); }
+  .reserve h2 { margin-bottom: 0; }
+  .reserve p { color: rgba(255,255,255,.7); font-size: .95rem; }
+  .reserve .btn { background: #fff; color: var(--ink); box-shadow: none; justify-self: start; }
+  .reserve .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
+  .reserve .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
-  /* Menu */
-  .menu { background: var(--bg-2); border-block: 1px solid var(--line); }
-  .menu-head { text-align: center; margin-bottom: 64px; }
-  .menu-head .lead { margin: 0 auto; }
-  .dishes { display: grid; gap: 0 72px; }
-  @media (min-width: 860px) { .dishes { grid-template-columns: 1fr 1fr; } }
-  .dish { padding: 26px 0; border-bottom: 1px solid var(--line); }
-  .dish h3 { font-family: var(--serif); font-weight: 400; font-size: 1.7rem; line-height: 1.2; color: var(--gold-soft); }
-  .dish p { color: var(--muted-text); font-size: .93rem; margin-top: 6px; }
-  .menu-note { text-align: center; margin-top: 56px; color: var(--muted-text); font-size: .85rem; letter-spacing: .08em; }
+  /* Footer */
+  footer { padding: 48px 0 24px; }
+  .foot { display: grid; gap: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .foot h4 { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; font-weight: 600; }
+  .foot ul { list-style: none; display: grid; gap: 8px; font-size: .92rem; font-weight: 500; }
+  .foot a:hover { text-decoration: underline; }
+  .copy { margin-top: 36px; font-size: .78rem; color: var(--muted); }
 
-  /* Details */
-  .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-  .tags span { border: 1px solid var(--line); padding: 9px 18px; font-size: .78rem; letter-spacing: .08em; color: var(--text); opacity: .85; transition: border-color .3s, color .3s; }
-  .tags span:hover { border-color: var(--gold); color: var(--gold-soft); }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; margin-bottom: 72px; text-align: center; }
-  .stat { padding: 32px 12px; border: 1px solid var(--line); }
-  .stat b { display: block; font-family: var(--serif); font-weight: 300; font-size: 3.2rem; line-height: 1; color: var(--gold-soft); }
-  .stat small { display: block; margin-top: 10px; font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted-text); }
+  /* Mobile action bar */
+  .dock {
+    position: fixed; z-index: 60; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 8px; padding: 8px; background: rgba(13,13,13,.94);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 22px; box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  }
+  .dock a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 15px; color: #fff; font-size: .8rem; font-weight: 600; }
+  .dock a.main { background: #fff; color: var(--ink); }
+  .dock svg { width: 17px; height: 17px; flex: none; }
 
-  /* Visit */
-  .visit { background: radial-gradient(60% 80% at 80% 100%, rgba(212,166,74,.12), transparent 70%), var(--bg-2); border-top: 1px solid var(--line); }
-  .visit .grid { display: grid; gap: 56px; }
-  @media (min-width: 860px) { .visit .grid { grid-template-columns: 1.1fr 1fr; align-items: end; } }
-  .contact-list { list-style: none; display: grid; gap: 22px; margin-bottom: 36px; }
-  .contact-list li small { display: block; font-size: .68rem; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); }
-  .contact-list li span { font-family: var(--serif); font-size: 1.5rem; }
-
-  footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: .75rem; letter-spacing: .12em; color: var(--muted-text); }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
-
-  /* Reveal (content stays visible without JS) */
-  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  /* Reveal */
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
   .js .reveal.in { opacity: 1; transform: none; }
+
+  /* Tablet */
+  @media (min-width: 640px) {
+    .wrap { padding: 0 32px; }
+    .rail { padding-left: 32px; padding-right: 32px; margin: 0 -32px; }
+    .menu-grid { grid-template-columns: 1fr 1fr; }
+    .stat b { font-size: 2.2rem; }
+    .foot { grid-template-columns: 1.2fr 1fr 1fr 1.2fr; }
+  }
+
+  /* Desktop */
+  @media (min-width: 960px) {
+    body { padding-bottom: 0; }
+    .dock { display: none; }
+    section { padding: 96px 0; }
+    header.top .wrap { height: 80px; }
+    header.top nav { display: flex; gap: 36px; font-size: .9rem; font-weight: 600; }
+    header.top nav a { color: var(--muted); transition: color .2s; }
+    header.top nav a:hover { color: var(--ink); }
+    .hero { padding: 48px 0 40px; }
+    .hero .wrap { grid-template-columns: 1fr 1.05fr; align-items: center; gap: 56px; }
+    .hero-art { width: 100%; max-width: 540px; }
+    .intro { grid-template-columns: 1fr 1fr; align-items: start; gap: 48px; margin-bottom: 36px; }
+    .rail { overflow: visible; flex-wrap: wrap; scroll-snap-type: none; padding: 4px 0 8px; margin: 0; gap: 24px; }
+    .dish-card { width: calc((100% - 48px) / 3); max-width: none; }
+    .menu-grid { grid-template-columns: repeat(3, 1fr); }
+    .split { grid-template-columns: 1fr 1fr; gap: 80px; }
+    .split.flip .art { order: 2; }
+    .arrows { display: flex; }
+    .rail.scroll { overflow-x: auto; flex-wrap: nowrap; scroll-snap-type: x mandatory; padding-bottom: 28px; }
+    .shot { width: 340px; }
+    .reserve .box { grid-template-columns: 1.3fr 1fr; align-items: center; padding: 64px; gap: 40px; }
+    .reserve .actions { justify-content: flex-end; }
+  }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .marquee-track, .scroll-hint { animation: none; }
     .js .reveal { opacity: 1; transform: none; transition: none; }
+    .btn, .dish-card .go { transition: none; }
   }
 </style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
 
-<nav id="nav">
+<header class="top">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Bold Restaurant Ghana">Bold</a>
-    <ul>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#visit">Visit</a></li>
-    </ul>
-    <a class="btn nav-cta" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve</a>
+    <a class="logo" href="#top" aria-label="Bold Restaurant Ghana">Bold<small>Restaurant &amp; Rooftop</small></a>
+    <nav aria-label="Primary">
+      <a href="#favourites">Favourites</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve</a>
   </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <span class="tag">Restaurant · Rooftop · Bar</span>
-    <h1>Bold</h1>
-    <p class="sub">The restaurant your friends keep telling you about. Come dine, connect, and feel at home.</p>
-    <div class="btn-row">
-      <a class="btn solid" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve a table</a>
-      <a class="btn" href="#menu">Explore the menu</a>
-    </div>
-    <div class="rating"><b>★ 4.3</b> &nbsp;·&nbsp; 206 Google reviews &nbsp;·&nbsp; Accra, Ghana</div>
-  </div>
-  <div class="scroll-hint" aria-hidden="true"></div>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Rooftop seating</span><span>Great cocktails</span><span>Brunch</span><span>Wine list</span><span>Late-night plates</span><span>Small plates</span><span>Great coffee</span><span>Dessert</span>
-    <span>Rooftop seating</span><span>Great cocktails</span><span>Brunch</span><span>Wine list</span><span>Late-night plates</span><span>Small plates</span><span>Great coffee</span><span>Dessert</span>
-  </div>
-</div>
+<main id="top">
 
-<section id="experience">
-  <div class="wrap split">
-    <div class="reveal">
-      <span class="eyebrow">The experience</span>
-      <h2>Cosy by candlelight. <em>Bold</em> in every detail.</h2>
-      <p class="lead">A trendy, romantic space with a quiet, easygoing mood. Guests mention the ambience more than anything else in their reviews, from rooftop evenings to long brunches.</p>
-    </div>
-    <div class="features reveal">
-      <div class="feature"><span class="n">01</span><div><h3>Rooftop &amp; outdoor seating</h3><p>Dine in, sit outside under the lights, or take your food away.</p></div></div>
-      <div class="feature"><span class="n">02</span><div><h3>Cocktails, wine &amp; beer</h3><p>Great cocktails, a great wine list, a strong beer selection and spirits at the bar.</p></div></div>
-      <div class="feature"><span class="n">03</span><div><h3>Coffee, tea &amp; dessert</h3><p>Great coffee and tea, with dessert to finish the evening.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="menu" id="menu">
+<!-- HERO -->
+<section class="hero">
   <div class="wrap">
-    <div class="menu-head reveal">
-      <span class="eyebrow">From the kitchen</span>
-      <h2>Dishes <em>worth talking about</em></h2>
-      <p class="lead">A selection from the menu. Ask the team for the current full menu.</p>
+    <div>
+      <h1>Good food is waiting for you</h1>
+      <p class="lead">The restaurant your friends keep telling you about. Come dine, connect, and feel at home on our rooftop in Accra.</p>
+      <a class="btn" href="#menu">View menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="chips" aria-label="Dining options">
+        <span class="chip">Brunch</span><span class="chip">Lunch</span><span class="chip">Dinner</span><span class="chip">Cocktails</span>
+      </div>
     </div>
-    <div class="dishes">
-      <div class="dish reveal"><h3>Korean Chicken Wings</h3><p>Fresh chicken wings with our special Korean mix, sprinkled with spring onions, sesame and ginger.</p></div>
-      <div class="dish reveal"><h3>Salmon Tartare</h3><p>Fresh salmon stacked with pickled radish, beetroot and caviar, seasoned with avocado cream.</p></div>
-      <div class="dish reveal"><h3>Goat Cheese Salad</h3><p>Fried goat cheese balls, arugula, walnuts, croutons, mushroom slices and balsamic dressing.</p></div>
-      <div class="dish reveal"><h3>Wagyu Burger</h3><p>A favourite in guest reviews.</p></div>
-      <div class="dish reveal"><h3>Salmon Ceviche</h3><p>Another guest favourite.</p></div>
-      <div class="dish reveal"><h3>Pizza, Bread &amp; Coconut Cotta</h3><p>Popular picks from the Google menu highlights.</p></div>
+    <div class="hero-art">
+      <img class="plate" src="images/seared-fish.jpg" width="828" height="605" alt="Seared fish on a green purée in a gold-rimmed bowl" fetchpriority="high">
+      <div class="badge"><b>★ 4.3</b>206 Google reviews</div>
     </div>
-    <p class="menu-note reveal">Halal · Vegetarian &amp; vegan options · Kids' menu · Catering available</p>
   </div>
 </section>
 
-<section id="details">
+<!-- FAVOURITES -->
+<section id="favourites" style="padding-top:24px">
+  <div class="wrap">
+    <div class="intro reveal">
+      <div>
+        <span class="eyebrow">Guest favourites</span>
+        <h2>We have delicious food, tasty food in town</h2>
+      </div>
+      <p class="muted">From sushi and seared fish to cocktails poured at our bar, there's something good at every hour. Tap the arrow on any dish to ask about it on WhatsApp.</p>
+    </div>
+    <div class="rail reveal">
+      <article class="dish-card">
+        <img src="images/sushi.jpg" width="828" height="1106" loading="lazy" alt="Sushi platter with tuna, salmon and avocado rolls">
+        <h3>Sushi platter</h3><p>Colourful rolls to share.</p>
+        <a class="go" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20ask%20about%20the%20sushi." target="_blank" rel="noopener" aria-label="Ask about the sushi on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="dish-card">
+        <img src="images/seared-fish.jpg" width="828" height="605" loading="lazy" alt="Seared fish on green purée">
+        <h3>Seared fish</h3><p>Crisp skin on a green purée.</p>
+        <a class="go" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20ask%20about%20the%20seared%20fish." target="_blank" rel="noopener" aria-label="Ask about the seared fish on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </article>
+      <article class="dish-card">
+        <img src="images/cocktail.jpg" width="828" height="1219" loading="lazy" alt="Red cocktail in a cut-glass coupe with a lemon slice">
+        <h3>Cocktails</h3><p>Great cocktails from the bar.</p>
+        <a class="go" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20ask%20about%20your%20cocktails." target="_blank" rel="noopener" aria-label="Ask about cocktails on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" style="padding-top:24px">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:26px">
+      <span class="eyebrow">From the kitchen</span>
+      <h2>A taste of the menu</h2>
+      <p class="muted">A selection of dishes. Ask the team for the current full menu.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item reveal"><h3>Korean Chicken Wings</h3><p>Fresh chicken wings with our special Korean mix, sprinkled with spring onions, sesame and ginger.</p></div>
+      <div class="menu-item reveal"><h3>Salmon Tartare</h3><p>Fresh salmon stacked with pickled radish, beetroot and caviar, seasoned with avocado cream.</p></div>
+      <div class="menu-item reveal"><h3>Goat Cheese Salad</h3><p>Fried goat cheese balls, arugula, walnuts, croutons, mushroom slices and balsamic dressing.</p></div>
+      <div class="menu-item reveal"><h3>Wagyu Burger</h3><p>A favourite in guest reviews.</p></div>
+      <div class="menu-item reveal"><h3>Salmon Ceviche</h3><p>Another guest favourite.</p></div>
+      <div class="menu-item reveal"><h3>Pizza, Bread &amp; Coconut Cotta</h3><p>Popular picks from the Google menu highlights.</p></div>
+    </div>
+    <p class="muted menu-note">Halal · Vegetarian &amp; vegan options · Kids' menu · Catering available</p>
+  </div>
+</section>
+
+<!-- SPLITS -->
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div class="art reveal">
+        <img src="images/patio.jpg" width="828" height="605" loading="lazy" alt="Outdoor patio with tables and the Bold bar in the background">
+        <div class="pill"><div>4.3<small>★ rating</small></div></div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">The place</span>
+        <h2>A rooftop evening, under the lights</h2>
+        <p class="muted">Cosy, romantic and trendy, with a quiet, easygoing mood. Guests mention the ambience more than anything else in their reviews.</p>
+        <ul class="ticks">
+          <li>Rooftop and outdoor seating</li>
+          <li>Dine in or take away</li>
+          <li>Brunch reservations recommended</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split flip">
+      <div class="art tall reveal">
+        <img src="images/bar-sign.jpg" width="828" height="605" loading="lazy" alt="The Bold bar with a lit sign and shelves of bottles" style="aspect-ratio:4/3">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">The bar</span>
+        <h2>Cocktails, wine &amp; a lot more</h2>
+        <p class="muted">Great cocktails, a great wine list and beer selection, spirits, plus great coffee and tea. Finish with dessert.</p>
+        <ul class="ticks">
+          <li>Great cocktails and wine list</li>
+          <li>Coffee, tea and dessert</li>
+          <li>Late-night food</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding-top:24px">
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <div>
+        <span class="eyebrow">Gallery</span>
+        <h2 style="margin:0">Step inside Bold</h2>
+      </div>
+      <div class="arrows">
+        <button type="button" id="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button type="button" id="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="rail scroll" id="rail">
+      <figure class="shot"><img src="images/pendant-lounge.jpg" width="828" height="1219" loading="lazy" alt="Covered dining area with pendant lights"><span>Covered dining</span></figure>
+      <figure class="shot"><img src="images/dining-room.jpg" width="818" height="616" loading="lazy" alt="Main dining room with hanging lights and a wood slat wall"><span>Main dining room</span></figure>
+      <figure class="shot"><img src="images/entrance.jpg" width="828" height="605" loading="lazy" alt="Bold entrance gate and sign at night"><span>The entrance</span></figure>
+      <figure class="shot"><img src="images/bar-sign.jpg" width="828" height="605" loading="lazy" alt="The Bold bar"><span>The bar</span></figure>
+      <figure class="shot"><img src="images/patio.jpg" width="828" height="605" loading="lazy" alt="Outdoor patio at night"><span>Patio</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section style="padding-top:24px">
   <div class="wrap">
     <div class="stats reveal">
       <div class="stat"><b>4.3</b><small>Google rating</small></div>
       <div class="stat"><b>206</b><small>Reviews</small></div>
-      <div class="stat"><b>21K+</b><small>Instagram followers</small></div>
+      <div class="stat"><b>21K+</b><small>Instagram</small></div>
     </div>
     <div class="reveal">
       <span class="eyebrow">Good to know</span>
-      <h2>Everything for a <em>smooth evening</em></h2>
-      <p class="lead">Brunch reservations are recommended.</p>
+      <h2>Everything for a smooth evening</h2>
       <div class="tags">
         <span>Accepts reservations</span><span>Brunch</span><span>Lunch</span><span>Dinner</span>
         <span>Late-night food</span><span>Table service</span><span>Groups welcome</span>
@@ -263,47 +375,77 @@
   </div>
 </section>
 
-<section class="visit" id="visit">
-  <div class="wrap grid">
-    <div class="reveal">
-      <span class="eyebrow">Visit</span>
-      <h2>Your table is <em>waiting</em></h2>
-      <p class="lead">Message us on WhatsApp to reserve, plan a birthday or ask about catering.</p>
-    </div>
-    <div class="reveal">
-      <ul class="contact-list">
-        <li><small>Address</small><span>12 Obenesu Cres, Accra, Ghana</span></li>
-        <li><small>Reservations</small><span><a href="tel:+233540777007">+233 54 077 7007</a></span></li>
-        <li><small>Instagram</small><span><a href="https://www.instagram.com/boldghana/" target="_blank" rel="noopener">@boldghana</a></span></li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn solid" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve on WhatsApp</a>
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Bold+Restaurant+12+Obenesu+Cres+Accra" target="_blank" rel="noopener">Get directions</a>
+<!-- RESERVE -->
+<section class="reserve" id="visit">
+  <div class="wrap">
+    <div class="box reveal">
+      <div>
+        <span class="eyebrow">Let's talk</span>
+        <h2>Want to reserve a table?</h2>
+        <p style="margin-top:12px">Message us on WhatsApp to book, plan a birthday or ask about catering. Brunch reservations are recommended.</p>
       </div>
-      <!-- TODO: add opening hours and confirm house number (Google says 12, WhatsApp says 11 Obenesu Cres). -->
+      <div class="actions">
+        <a class="btn" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve on WhatsApp</a>
+        <a class="btn ghost" href="tel:+233540777007">Call us</a>
+      </div>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
-    <span>© Bold Restaurant Ghana</span>
-    <span>Obenesu Cres, Accra</span>
+    <div class="foot">
+      <div>
+        <a class="logo" href="#top">Bold<small>Restaurant &amp; Rooftop</small></a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#favourites">Favourites</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+233540777007">+233 54 077 7007</a></li>
+          <li><a href="https://www.instagram.com/boldghana/" target="_blank" rel="noopener">@boldghana</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <ul>
+          <li>12 Obenesu Cres</li><li>Accra, Ghana</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Bold+Restaurant+12+Obenesu+Cres+Accra" target="_blank" rel="noopener">Get directions →</a></li>
+        </ul>
+        <!-- TODO: add opening hours and confirm house number (Google says 12, WhatsApp says 11 Obenesu Cres). -->
+      </div>
+    </div>
+    <p class="copy">© Bold Restaurant Ghana</p>
   </div>
 </footer>
 
+<!-- Mobile action bar -->
+<nav class="dock" aria-label="Quick actions">
+  <a class="main" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Reserve</a>
+  <a href="tel:+233540777007"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Bold+Restaurant+12+Obenesu+Cres+Accra" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Map</a>
+</nav>
+
 <script>
   (function () {
-    var nav = document.getElementById('nav');
-    function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 40); }
-    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-
     var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(function (e) { io.observe(e); });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      els.forEach(function (e) { io.observe(e); });
+    } else { els.forEach(function (e) { e.classList.add('in'); }); }
+
+    var rail = document.getElementById('rail');
+    function step(dir) { rail.scrollBy({ left: dir * 360, behavior: 'smooth' }); }
+    document.getElementById('prev').addEventListener('click', function () { step(-1); });
+    document.getElementById('next').addEventListener('click', function () { step(1); });
   })();
 </script>
 </body>
