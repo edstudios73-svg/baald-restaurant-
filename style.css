@@ -105,12 +105,6 @@
     .hero .btn { min-height: 48px; padding: 13px 24px; }
   }
 
-  /* Ribbon */
-  .ribbon { background: var(--ink); color: #fff; overflow: hidden; padding: 16px 0; }
-  .ribbon-track { display: flex; width: max-content; animation: slide 36s linear infinite; }
-  .ribbon span { font-size: .78rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; white-space: nowrap; padding: 0 22px; opacity: .92; }
-  .ribbon span::after { content: "✦"; margin-left: 44px; opacity: .55; font-size: .7rem; }
-  @keyframes slide { to { transform: translateX(-50%); } }
 
   /* Favourites carousel */
   .intro { display: grid; gap: 10px; margin-bottom: 26px; }
@@ -247,7 +241,6 @@
     .js .reveal { opacity: 1; transform: none; transition: none; }
     .btn, .dish-card .go { transition: none; }
     .slide img { transform: none !important; transition: none; }
-    .ribbon-track { animation: none; }
   }
 
 /* ===== Menu page (classic) ===== */
