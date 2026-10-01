@@ -54,27 +54,71 @@
   .btn.ghost { background: transparent; color: var(--ink); box-shadow: none; border: 1.5px solid var(--ink); }
 
   /* Header */
-  header.top { position: sticky; top: 0; z-index: 40; background: rgba(246,245,242,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -.03em; line-height: 1; }
-  .logo small { display: block; font-size: .56rem; font-weight: 500; letter-spacing: .04em; color: var(--muted); margin-top: 3px; }
+  .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -.03em; line-height: 1; display: block; }
+  .logo small { display: block; font-size: .56rem; font-weight: 500; letter-spacing: .04em; margin-top: 4px; }
+  header.top { position: fixed; inset: 0 0 auto 0; z-index: 70; color: #fff; transition: background .35s, color .35s, box-shadow .35s; }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  header.top.solid { background: rgba(246,245,242,.9); color: var(--ink); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); }
+  body.menu-open header.top { background: transparent; color: #fff; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  header.top .logo small { color: inherit; opacity: .7; }
   header.top nav { display: none; }
-  header.top .btn { padding: 11px 20px; min-height: 0; font-size: .82rem; border-radius: 12px; }
+  .head-actions { display: flex; align-items: center; gap: 10px; }
+  header.top .btn { padding: 11px 18px; min-height: 0; font-size: .8rem; border-radius: 12px; background: #fff; color: var(--ink); box-shadow: none; }
+  header.top.solid .btn { background: var(--ink); color: #fff; }
+  body.menu-open header.top .btn { background: #fff; color: var(--ink); }
+  .burger { width: 44px; height: 44px; border-radius: 14px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; display: grid; place-content: center; opacity: .95; }
+  .burger i { display: block; width: 18px; height: 2px; background: currentColor; margin: 3px 0; transition: transform .3s; }
+  body.menu-open .burger i:first-child { transform: translateY(5px) rotate(45deg); }
+  body.menu-open .burger i:last-child { transform: translateY(-5px) rotate(-45deg); }
+
+  /* Full-screen menu (mobile) */
+  .menu-overlay { position: fixed; inset: 0; z-index: 60; background: #0b0b0a; color: #fff; display: flex; flex-direction: column; justify-content: center; padding: 90px 28px 40px; opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s; }
+  body.menu-open .menu-overlay { opacity: 1; visibility: visible; }
+  body.menu-open { overflow: hidden; }
+  .menu-overlay a.big { font-size: clamp(2.4rem, 11vw, 3.6rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.25; display: block; opacity: 0; transform: translateY(18px); transition: opacity .5s, transform .5s; }
+  body.menu-open .menu-overlay a.big { opacity: 1; transform: none; }
+  body.menu-open .menu-overlay a.big:nth-child(2) { transition-delay: .06s; }
+  body.menu-open .menu-overlay a.big:nth-child(3) { transition-delay: .12s; }
+  body.menu-open .menu-overlay a.big:nth-child(4) { transition-delay: .18s; }
+  .menu-overlay .meta { margin-top: 36px; color: rgba(255,255,255,.62); font-size: .92rem; display: grid; gap: 6px; }
+  .menu-overlay .meta a { color: #fff; font-weight: 600; }
 
   /* Hero */
-  .hero { padding: 28px 0 24px; overflow: hidden; }
-  .hero .wrap { display: grid; gap: 28px; }
-  .hero h1 { font-size: clamp(2.5rem, 11vw, 4.6rem); margin-bottom: 16px; }
-  .hero p.lead { color: var(--muted); max-width: 440px; margin-bottom: 24px; }
-  .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
-  .chip { background: var(--card); border-radius: 14px; padding: 10px 16px; font-size: .82rem; font-weight: 600; box-shadow: 0 6px 20px rgba(20,20,10,.07); }
-  .hero-art { position: relative; justify-self: center; width: min(86vw, 460px); aspect-ratio: 1; }
-  .hero-art .plate { width: 100%; height: 100% !important; object-fit: cover; border-radius: 50%; box-shadow: 0 30px 60px rgba(20,20,10,.28); border: 8px solid #fff; }
-  .hero-art .badge {
-    position: absolute; left: -2%; bottom: 8%; background: var(--card); border-radius: 18px;
-    padding: 12px 16px; box-shadow: var(--shadow); font-size: .8rem; line-height: 1.3;
+  .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: flex-end; color: #fff; background: #000; overflow: hidden; padding: 0; }
+  .slides, .slide { position: absolute; inset: 0; }
+  .slide { opacity: 0; transition: opacity 1.4s ease; }
+  .slide.active { opacity: 1; }
+  .slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); transition: transform 9s ease-out; }
+  .slide.active img { transform: scale(1); }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.08) 30%, rgba(0,0,0,.34) 48%, rgba(0,0,0,.84) 80%, rgba(0,0,0,.94) 100%);
   }
-  .hero-art .badge b { display: block; font-size: 1.15rem; font-weight: 800; }
+  .hero-content { position: relative; z-index: 2; padding-top: 120px; padding-bottom: 34px; }
+  .kicker { display: inline-flex; align-items: center; gap: 10px; font-size: .66rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.85); margin-bottom: 18px; white-space: nowrap; }
+  .kicker::before { content: ""; width: 20px; flex: none; height: 1px; background: currentColor; }
+  .hero h1 { font-size: clamp(2.8rem, 13vw, 7.2rem); line-height: .98; letter-spacing: -.045em; margin-bottom: 18px; text-shadow: 0 2px 30px rgba(0,0,0,.35); }
+  .hero p.lead { color: rgba(255,255,255,.82); max-width: 460px; font-size: 1rem; margin-bottom: 26px; }
+  .rating-pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 999px; padding: 8px 16px 8px 12px; font-size: .78rem; font-weight: 500; margin-bottom: 22px; }
+  .rating-pill b { font-weight: 800; }
+  .hero-ctas { display: grid; gap: 12px; margin-bottom: 28px; }
+  .hero .btn { width: 100%; background: #fff; color: var(--ink); box-shadow: 0 14px 34px rgba(0,0,0,.35); }
+  .hero .btn.glass { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: none; }
+  .hero-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); }
+  .chips { display: flex; gap: 0 10px; flex-wrap: nowrap; white-space: nowrap; font-size: .7rem; font-weight: 600; letter-spacing: .02em; color: rgba(255,255,255,.85); }
+  .chips span + span::before { content: "·"; margin-right: 10px; opacity: .6; }
+  .pager { display: flex; gap: 4px; flex: none; }
+  .pager button { width: 18px; height: 22px; background: none; border: 0; cursor: pointer; position: relative; padding: 0; }
+  .pager button::after { content: ""; position: absolute; left: 0; right: 0; top: 10px; height: 2px; border-radius: 2px; background: rgba(255,255,255,.35); transition: background .3s; }
+  .pager button.on::after { background: #fff; }
+
+  /* Ribbon */
+  .ribbon { background: var(--ink); color: #fff; overflow: hidden; padding: 16px 0; }
+  .ribbon-track { display: flex; width: max-content; animation: slide 36s linear infinite; }
+  .ribbon span { font-size: .78rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; white-space: nowrap; padding: 0 22px; opacity: .92; }
+  .ribbon span::after { content: "✦"; margin-left: 44px; opacity: .55; font-size: .7rem; }
+  @keyframes slide { to { transform: translateX(-50%); } }
 
   /* Favourites carousel */
   .intro { display: grid; gap: 10px; margin-bottom: 26px; }
@@ -148,7 +192,8 @@
   .foot h4 { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; font-weight: 600; }
   .foot ul { list-style: none; display: grid; gap: 8px; font-size: .92rem; font-weight: 500; }
   .foot a:hover { text-decoration: underline; }
-  .copy { margin-top: 36px; font-size: .78rem; color: var(--muted); }
+  .copy { margin-top: 36px; font-size: .78rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+  .copy a { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
   /* Mobile action bar */
   .dock {
@@ -159,6 +204,10 @@
   .dock a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 15px; color: #fff; font-size: .8rem; font-weight: 600; }
   .dock a.main { background: #fff; color: var(--ink); }
   .dock svg { width: 17px; height: 17px; flex: none; }
+
+  .js .dock { transform: translateY(160%); transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .js body.past-hero .dock { transform: none; }
+  body.menu-open .dock { display: none; }
 
   /* Reveal */
   .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
@@ -178,13 +227,16 @@
     body { padding-bottom: 0; }
     .dock { display: none; }
     section { padding: 96px 0; }
-    header.top .wrap { height: 80px; }
-    header.top nav { display: flex; gap: 36px; font-size: .9rem; font-weight: 600; }
-    header.top nav a { color: var(--muted); transition: color .2s; }
-    header.top nav a:hover { color: var(--ink); }
-    .hero { padding: 48px 0 40px; }
-    .hero .wrap { grid-template-columns: 1fr 1.05fr; align-items: center; gap: 56px; }
-    .hero-art { width: 100%; max-width: 540px; }
+    header.top .wrap { height: 84px; }
+    header.top nav { display: flex; gap: 38px; font-size: .88rem; font-weight: 600; }
+    header.top nav a { opacity: .8; transition: opacity .2s; }
+    header.top nav a:hover { opacity: 1; }
+    .burger, .menu-overlay { display: none; }
+    .hero-content { padding-bottom: 56px; }
+    .hero h1 { font-size: clamp(5rem, 9vw, 8.4rem); }
+    .hero p.lead { font-size: 1.1rem; }
+    .hero-ctas { grid-template-columns: auto auto; justify-content: start; }
+    .hero .btn { width: auto; min-width: 190px; }
     .intro { grid-template-columns: 1fr 1fr; align-items: start; gap: 48px; margin-bottom: 36px; }
     .rail { overflow: visible; flex-wrap: wrap; scroll-snap-type: none; padding: 4px 0 8px; margin: 0; gap: 24px; }
     .dish-card { width: calc((100% - 48px) / 3); max-width: none; }
@@ -201,13 +253,15 @@
     html { scroll-behavior: auto; }
     .js .reveal { opacity: 1; transform: none; transition: none; }
     .btn, .dish-card .go { transition: none; }
+    .slide img { transform: none !important; transition: none; }
+    .ribbon-track { animation: none; }
   }
 </style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
 
-<header class="top">
+<header class="top" id="header">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Bold Restaurant Ghana">Bold<small>Restaurant &amp; Rooftop</small></a>
     <nav aria-label="Primary">
@@ -216,31 +270,64 @@
       <a href="#gallery">Gallery</a>
       <a href="#visit">Visit</a>
     </nav>
-    <a class="btn" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve</a>
+    <div class="head-actions">
+      <a class="btn" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve</a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-overlay"><span><i></i><i></i></span></button>
+    </div>
   </div>
 </header>
+
+<div class="menu-overlay" id="menu-overlay">
+  <a class="big" href="#favourites">Favourites</a>
+  <a class="big" href="#menu">Menu</a>
+  <a class="big" href="#gallery">Gallery</a>
+  <a class="big" href="#visit">Visit &amp; reserve</a>
+  <div class="meta">
+    <span>12 Obenesu Cres, Accra</span>
+    <a href="tel:+233540777007">+233 54 077 7007</a>
+    <a href="https://www.instagram.com/boldghana/" target="_blank" rel="noopener">@boldghana</a>
+  </div>
+</div>
 
 <main id="top">
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <div>
-      <h1>Good food is waiting for you</h1>
-      <p class="lead">The restaurant your friends keep telling you about. Come dine, connect, and feel at home on our rooftop in Accra.</p>
-      <a class="btn" href="#menu">View menu
+  <div class="slides" aria-hidden="true">
+    <div class="slide active">
+      <picture><source media="(min-width:960px)" srcset="images/bar-sign.jpg"><img src="images/pendant-lounge.jpg" alt="" fetchpriority="high" style="object-position:50% 60%"></picture>
+    </div>
+    <div class="slide">
+      <picture><source media="(min-width:960px)" srcset="images/dining-room.jpg"><img src="images/cocktail.jpg" alt="" loading="lazy"></picture>
+    </div>
+    <div class="slide">
+      <picture><source media="(min-width:960px)" srcset="images/patio.jpg"><img src="images/sushi.jpg" alt="" loading="lazy"></picture>
+    </div>
+  </div>
+  <div class="wrap hero-content">
+    <span class="kicker">Accra · Rooftop · Bar</span>
+    <h1>Eat bold.<br>Feel at home.</h1>
+    <p class="lead">The restaurant your friends keep telling you about. Rooftop dining, great cocktails and plates worth the trip.</p>
+    <div class="rating-pill"><span>★</span><b>4.3</b><span>· 206 Google reviews</span></div>
+    <div class="hero-ctas">
+      <a class="btn" href="https://wa.me/233540777007?text=Hello%20Bold%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve a table</a>
+      <a class="btn glass" href="#menu">View menu
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <div class="chips" aria-label="Dining options">
-        <span class="chip">Brunch</span><span class="chip">Lunch</span><span class="chip">Dinner</span><span class="chip">Cocktails</span>
-      </div>
     </div>
-    <div class="hero-art">
-      <img class="plate" src="images/seared-fish.jpg" width="828" height="605" alt="Seared fish on a green purée in a gold-rimmed bowl" fetchpriority="high">
-      <div class="badge"><b>★ 4.3</b>206 Google reviews</div>
+    <div class="hero-foot">
+      <div class="chips" aria-label="Dining options"><span>Brunch</span><span>Lunch</span><span>Dinner</span><span>Cocktails</span></div>
+      <div class="pager" id="pager" aria-label="Hero photos"><button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
     </div>
   </div>
 </section>
+
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span>Rooftop seating</span><span>Great cocktails</span><span>Brunch</span><span>Wine list</span><span>Late-night food</span><span>Halal</span><span>Vegan options</span><span>Dessert</span>
+    <span>Rooftop seating</span><span>Great cocktails</span><span>Brunch</span><span>Wine list</span><span>Late-night food</span><span>Halal</span><span>Vegan options</span><span>Dessert</span>
+  </div>
+</div>
 
 <!-- FAVOURITES -->
 <section id="favourites" style="padding-top:24px">
@@ -420,7 +507,7 @@
         <!-- TODO: add opening hours and confirm house number (Google says 12, WhatsApp says 11 Obenesu Cres). -->
       </div>
     </div>
-    <p class="copy">© Bold Restaurant Ghana</p>
+    <p class="copy"><span>© Bold Restaurant Ghana</span><span>Designed by <a href="https://baiden-creatives.vercel.app" target="_blank" rel="noopener">Baiden Creatives</a></span></p>
   </div>
 </footer>
 
@@ -434,6 +521,10 @@
 
 <script>
   (function () {
+    var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var body = document.body, header = document.getElementById('header'), hero = document.querySelector('.hero');
+
+    // Reveal on scroll
     var els = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
@@ -442,10 +533,39 @@
       els.forEach(function (e) { io.observe(e); });
     } else { els.forEach(function (e) { e.classList.add('in'); }); }
 
+    // Header + dock state
+    function onScroll() {
+      var h = hero.offsetHeight, y = window.scrollY;
+      header.classList.toggle('solid', y > h - 90);
+      body.classList.toggle('past-hero', y > h * 0.55);
+    }
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Hero slideshow
+    var slides = [].slice.call(document.querySelectorAll('.slide')), bars = [].slice.call(document.querySelectorAll('#pager button')), i = 0, timer;
+    function show(n) {
+      slides[i].classList.remove('active'); bars[i].classList.remove('on');
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add('active'); bars[i].classList.add('on');
+      var img = slides[i].querySelector('img'); if (img) img.loading = 'eager';
+    }
+    if (!reduced) timer = setInterval(function () { show(i + 1); }, 5500);
+    bars.forEach(function (b, n) { b.addEventListener('click', function () { show(n); clearInterval(timer); }); });
+
+    // Mobile menu
+    var burger = document.getElementById('burger');
+    function setMenu(open) {
+      body.classList.toggle('menu-open', open);
+      burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    burger.addEventListener('click', function () { setMenu(!body.classList.contains('menu-open')); });
+    document.querySelectorAll('.menu-overlay a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+    // Gallery arrows
     var rail = document.getElementById('rail');
-    function step(dir) { rail.scrollBy({ left: dir * 360, behavior: 'smooth' }); }
-    document.getElementById('prev').addEventListener('click', function () { step(-1); });
-    document.getElementById('next').addEventListener('click', function () { step(1); });
+    document.getElementById('prev').addEventListener('click', function () { rail.scrollBy({ left: -360, behavior: 'smooth' }); });
+    document.getElementById('next').addEventListener('click', function () { rail.scrollBy({ left: 360, behavior: 'smooth' }); });
   })();
 </script>
 </body>
